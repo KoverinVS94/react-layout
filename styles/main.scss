@@ -1,0 +1,26 @@
+// font
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,500&subset=cyrillic');
+
+// dependencies
+@import "~compass-mixins/lib/compass/css3";
+@import "~susy/sass/susy";
+@import "~breakpoint-sass/stylesheets/breakpoint";
+@import '~normalize.css';
+@import "~resets.css/resets.css";
+
+// base
+@import "base/mixins";
+@import "base/variables";
+@import "base/global";
+@import "base/fonts";
+@import "base/grid";
+
+// layout
+@import "layout/animations";
+@import "layout/helpers";
+@import "layout/icons";
+
+.title {
+    font-size: 59px;
+}

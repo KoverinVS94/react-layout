@@ -1,0 +1,32 @@
+body {
+    overflow: hidden;
+    height: 100%;
+  
+    transition: opacity .2s ease;
+
+    color: $color-primary;
+    font: 16px $font-primary;
+
+  }
+  
+  body[data-loaded="true"] {
+    overflow: inherit;
+    overflow-x: hidden;
+    height: inherit;
+    position: relative !important;
+  
+    opacity: 1;
+    
+    #preloader {
+      display: none;
+    }
+  }
+
+h1,h2,h3,h4,h5,h6{
+  margin:0;
+  font-weight:600;
+}
+
+p {
+  margin:0;
+}
