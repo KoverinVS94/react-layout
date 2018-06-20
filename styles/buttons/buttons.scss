@@ -1,0 +1,14 @@
+.btn-action {
+  width: 326px;
+  height: 65px;
+  box-shadow: 3px 5px 9px rgba(31, 31, 31, .25);
+  border-radius: 32px;
+  background-color: #d554ec;
+  color: #fff;
+  font-size: 26px;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: #e760ff;
+  }
+}

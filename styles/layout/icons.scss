@@ -1,0 +1,10 @@
+.icon {
+    display: block;
+    background-repeat: no-repeat;
+    
+    &-info {
+        width: 28px;
+        height: 30px;
+        background-image: url('images/icon-info.png');
+    }
+}

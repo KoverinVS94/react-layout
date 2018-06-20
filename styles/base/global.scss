@@ -30,3 +30,20 @@ h1,h2,h3,h4,h5,h6{
 p {
   margin:0;
 }
+
+.container {
+  @include container;
+  max-width: 75em;
+  margin: 0 auto;
+}
+
+.section-main {
+  background: $color-green;
+  padding: 157px 0 192px 0;
+
+  .overlay {
+    width: 455px;
+    margin: 0 0 65px 40px;
+    color: $color-white;
+  }
+}

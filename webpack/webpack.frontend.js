@@ -53,7 +53,11 @@ module.exports = {
                     use: [
                         {
                             loader: "css-loader",
-                            options: sourceMapOptions
+                            options: {
+                                modules: true,
+                                localIdentName: debug ? "[local]" : "[hash:base64:3]",
+                                ...sourceMapOptions
+                            }                            
                         },
                         {
                             loader: "postcss-loader",

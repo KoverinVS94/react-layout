@@ -10,6 +10,8 @@
             true,
             "never"
         ],
+        "no-string-literal": false,
+        "no-implicit-dependencies": false,
         "no-console": false,
         "jsx-no-multiline-js": false,
         "only-arrow-functions": false,
