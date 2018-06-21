@@ -13,8 +13,6 @@ import {
 
 const hashClasses = require("main.scss");
 
-import { CustomSlider } from "./CustomSlider";
-
 interface CalculatorState {
     promocode: string;
 }
@@ -28,9 +26,8 @@ export class Calculator extends React.Component<{}, CalculatorState> {
 
     public render(): React.ReactNode {
         return (
-            <ReactCreditCalculator {...this.conditions}>
+            <React.Fragment>
                 <div className={hashClasses["calc-main"]}>
-                    <div className={hashClasses["illustration"]} />
                     <div className={hashClasses["calc-content"]}>
                         <CalculatorControlWrapper type={CalculatorControlTypes.amount}>
                             <div className={hashClasses["form-group"]}>
@@ -80,21 +77,19 @@ export class Calculator extends React.Component<{}, CalculatorState> {
                         <p>Сервис работает на прозрачных условиях. Мы не взимаем дополнительных комиссий и платежей.</p>
                     </div>
                 </div>
-                <div className={hashClasses["wrap-bottom"]}>
-                    <div className={hashClasses["calc-bottom"]}>
-                        <div className={hashClasses["sum-return"]}>
-                            <span>Сумма к возврату:</span>
-                            <CalculatorLabel labelType={CalculatorLabelTypes.total} /> грн.
+                <div className={hashClasses["calc-bottom"]}>
+                    <div className={hashClasses["sum-return"]}>
+                        <span>Сумма к возврату:</span>
+                        <CalculatorLabel labelType={CalculatorLabelTypes.total} /> грн.
+                    </div>
+                    <div className={hashClasses["text-percent"]}>
+                        <div className={hashClasses["wrap-icon"]}>
+                            <i className={`${hashClasses["icon"]} ${hashClasses["icon-info"]}`} />
                         </div>
-                        <div className={hashClasses["text-percent"]}>
-                            <div className={hashClasses["wrap-icon"]}>
-                                <i className={`${hashClasses["icon"]} ${hashClasses["icon-info"]}`} />
-                            </div>
-                            <p>Наша APR (максимальная годовая процентная ставка) составляет 638,75%.</p>
-                        </div>
+                        <p>Наша APR (максимальная годовая процентная ставка) составляет 638,75%.</p>
                     </div>
                 </div>
-            </ReactCreditCalculator>
+            </React.Fragment>
         );
     }
 

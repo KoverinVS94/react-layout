@@ -1,24 +1,15 @@
+/*
+ Calculator style
+*/
+
 .calc {
-  
-  .illustration {
-    display: block;
-    width: 747px;
-    height: 560px;
 
-    position: absolute;
-    top: -450px;
-    right: -100px;
-
-    background-image: url('images/illustration.png');
-    background-repeat: no-repeat;
-    z-index: -1;
-  }
+  position: relative;
+  z-index: 10;
 
   .calc-main {
     position: relative;
-    width: 1200px;
-    margin: 0 auto;
-    padding: 40px;
+    padding: 2.500em;
 
     border-radius: 30px 30px 0 0;
     background-color: #ffffff;
@@ -38,97 +29,81 @@
       z-index: 20;
 
       .btn-action {
-        margin-bottom: 25px;
+        margin-bottom: 1em;
       }
 
       p {
         width: 340px;
+        padding: 0 .938em;
+        float: right;
+
         color: #bbb;
-        font-size: 14px;
+        font-size: .875em;
         line-height: 18px;
-        float: right;
-        padding: 0 15px;
+
       }
     }
   }
 
-  .wrap-bottom {
-    position: relative;
+  .calc-bottom {
+    padding: 1.688em 3.438em 1.688em 2.688em;
 
-    &:after {
-      display: block;
-      width: 100%;
-      height: 174px;
+    box-shadow: inset 1px 2px 5px rgba(6, 6, 6, 0.08);
+    border-radius: 0 0 30px 30px;
+    background-color: #f9f9f9;
 
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
+    z-index: 10;
 
-      background-image: linear-gradient(to top, rgba(0, 181, 119, 0) 0%, #ffffff 100%);
-      opacity: .24;
-      z-index: 1;
-      content: '';
-      pointer-events: none;
-    }
+    @include clearfix;
 
-    .calc-bottom {
-      width: 1200px;
-      margin: 0 auto;
-      padding: 35px 55px 35px 43px;
-  
-      box-shadow: inset 1px 2px 5px rgba(6, 6, 6, 0.08);
-      border-radius: 0 0 30px 30px;
-      background-color: #f9f9f9;
+    .sum-return {
 
-      z-index: 10;
+      float:left;
 
-      @include clearfix;
+      span {
 
-      .sum-return {
+        &:nth-of-type(1) {
+          color: #a6a6a6;
+          font-size: 1.25em;
+        }
 
-        float:left;
-
-        span {
-
-          &:nth-of-type(1) {
-            color: #a6a6a6;
-            font-size: 20px;
-          }
-
-          &:nth-of-type(2) {
-            color: #636363;
-            font-size: 33px;
-            padding: 0 0 0 10px;
-          }
+        &:nth-of-type(2) {
+          color: #636363;
+          font-size: 2.063em;
+          padding: 0 0 0 .625em;
         }
       }
+    }
 
-      .text-percent {
-        display: table;
-        float: right;
-        
-        .wrap-icon {
-          display: table-cell;
-          vertical-align: middle;
-        }
-        
+    .text-percent {
+      display: table;
+      float: right;
+      
+      .wrap-icon {
+        display: table-cell;
+        vertical-align: middle;
+      }
+      
 
-        p {
-          display: table-cell;
-          padding-left: 15px;
-          width: 265px;
-          color: #bbbbbb;
-          font-size: 14px;
-          vertical-align: middle;
-        }
+      p {
+        display: table-cell;
+        width: 265px;
+        padding-left: .938em;
+
+        color: #bbbbbb;
+        font-size: .875em;
+        vertical-align: middle;
       }
     }
   }
+
 
   .form-group {
     display: table;
-    margin-bottom: 30px;
+
+    &:not(:last-child) {
+      margin-bottom: 1.875em;
+    }
 
     .wrap-label,
     .wrap-rc-slider,
@@ -143,7 +118,7 @@
   
       .form-label {
         color: #636363;
-        font-size: 20px;
+        font-size: 1.250em;
       }
     }
   
@@ -153,7 +128,7 @@
   
     .input-group {
       width: 20%;
-      padding: 0 0 0 35px;
+      padding-left: 2.188em;
   
       .form-control {
         width: 138px;
@@ -168,8 +143,10 @@
         position: absolute;
         top: 13px;
         left: 125px;
+
         color: #bbbaba;
-        font-size: 16px;
+        font-size: 1em;
+        pointer-events: none;
         content: 'грн.';
       }
     }
@@ -186,8 +163,10 @@
         position: absolute;
         top: 13px;
         left: 95px;
+        
         color: #bbbaba;
-        font-size: 16px;
+        font-size: 1em;
+        pointer-events: none;
         content: 'дней';
       }
     }

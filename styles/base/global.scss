@@ -47,3 +47,47 @@ p {
     color: $color-white;
   }
 }
+
+.wrap {
+
+  position: relative;
+
+  &:after {
+    display: block;
+    width: 100%;
+    height: 174px;
+
+    position: absolute;
+    top: 208px;
+    left: 0;
+    right: 0;
+
+    background-image: linear-gradient(to top, rgba(0, 181, 119, 0) 0%, #ffffff 100%);
+    opacity: .24;
+    z-index: 1;
+
+    content: '';
+    pointer-events: none;
+  }
+
+  & > .container {
+    position: relative;
+
+    &:before {
+      display: block;
+      width: 747px;
+      height: 560px;
+  
+      position: absolute;
+      top: -450px;
+      right: -100px;
+  
+      background-image: url('images/illustration.png');
+      background-repeat: no-repeat;
+      z-index: 11;
+  
+      content: '';
+      pointer-events: none;
+    }
+  }
+}
