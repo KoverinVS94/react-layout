@@ -1,0 +1,51 @@
+/*
+Items style
+*/
+
+.list {
+
+  margin-bottom: 4.063em;
+  @include justify-content;
+
+  .list-item {
+
+    text-align: center;
+
+      &:first-child {
+
+      .icon {
+
+        &:before {
+
+          top: 58%;
+        }
+      }   
+    }
+
+    .icon {
+      position: relative;
+      margin-bottom: 1.5em;
+
+      &:before {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        content: '';
+      }
+
+      &:after {
+        display: block;
+        width: 35px;
+        height: 35px;
+
+        position: absolute;
+        bottom: -12px;
+
+        background-repeat: no-repeat;
+        content: '';
+      }
+    }
+  }
+}

@@ -1,10 +1,75 @@
 .icon {
-    display: block;
-    background-repeat: no-repeat;
-    
-    &-info {
-        width: 28px;
-        height: 30px;
-        background-image: url('images/icon-info.png');
+  display: block;
+  background-repeat: no-repeat;
+  
+  &-info {
+    width: 28px;
+    height: 30px;
+    background-image: url('images/icon-info.png');
+  }
+
+  &-user {
+
+    &:before {
+      width: 57px;
+      height: 74px;
+      background-image: url('images/user.svg');
     }
+  
+    &:after {
+      position: absolute;
+      right: -4px;
+      background-image: url('images/18-age.svg');
+    }
+  }
+  
+  &-id-card {
+  
+    &:before {
+      width: 36px;
+      height: 50px;
+      background-image: url('images/id-card.svg');
+    }
+  
+    &:after {
+      position: absolute;
+      right: -10px;
+      background-image: url('images/ua.svg');
+    }
+  }
+  
+  &-credit-card {
+  
+    &:before {
+      width: 48px;
+      height: 31px;
+      background-image: url('images/credit-card.svg');
+    }
+  
+    &:after {
+      position: absolute;
+      right: -10px;
+      background-image: url('images/check.svg');
+    }
+  }
+  
+  &-inn {
+  
+    &:before {
+      width: 55px;
+      height: 38px;
+      background-image: url('images/INN.svg');
+    }
+  
+    &:after {
+      position: absolute;
+      right: -10px;
+      background-image: url('images/check.svg');
+    }
+  }
 }
+
+
+
+
+
