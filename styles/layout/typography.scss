@@ -10,7 +10,6 @@ h1.title {
 }
 
 h2.title {
-  color: #65bc1f;
   font-size: 45px;
   font-weight: 400;
 }
@@ -37,6 +36,7 @@ h2.title {
 
   h2 {
     margin-bottom: 1.111em;
+    color: #65bc1f;
   }
 
   p {
@@ -44,5 +44,33 @@ h2.title {
     font-family: $font-secondary;
     font-size: 1.125em;
     font-weight: 300;
+  }
+}
+
+.section-how-it-work {
+
+  h2 {
+    color: $color-white;
+    margin-bottom: 40px;
+  }
+
+  & > .container {
+    
+    & > p {
+
+      margin-bottom: 65px;
+      font-size: 18px;
+      font-weight: 300;
+    }
+  }
+
+  p {
+    color: $color-white;
+    font-family: $font-secondary;
+  }
+
+  span {
+    
+    color: $color-white;
   }
 }

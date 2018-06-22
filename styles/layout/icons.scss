@@ -67,6 +67,72 @@
       background-image: url('images/check.svg');
     }
   }
+
+  &-calc {
+
+    &:before {
+      width: 33px;
+      height: 33px;
+      background-image: url('images/calc.svg');
+    }
+
+    &:after {
+      content: '1';
+    }
+  }
+
+  &-doc {
+
+    &:before {
+      width: 29px;
+      height: 37px;
+      background-image: url('images/doc.svg');
+    }
+
+    &:after {
+      content: '2';
+    }
+  }
+
+  &-card-pay {
+
+    &:before {
+      width: 36px;
+      height: 27px;
+      background-image: url('images/card-pay.svg');
+    }
+
+    &:after {
+      content: '3';
+    }
+  }
+
+  &-card-pay-check {
+
+    &:before {
+      width: 43px;
+      height: 30px;
+      background-image: url('images/card-pay-check.svg');
+    }
+  }
+
+  &-ibox {
+
+    &:before {
+      width: 28px;
+      height: 40px;
+      background-image: url('images/ibox.svg');
+    }
+  }
+
+  &-bank {
+
+    &:before {
+      width: 37px;
+      height: 37px;
+      background-image: url('images/bank.svg');
+    }
+  }
 }
 
 

@@ -10,7 +10,7 @@ export class SectionReceipt extends React.Component {
                 <div className={`${hashClasses["section"]} ${hashClasses["section-receipt"]}`}>
                     <div className={hashClasses["container"]}>
                         <h2 className={hashClasses["title"]}>Условия получения</h2>
-                        <ul className={hashClasses["list"]}>
+                        <ul className={`${hashClasses["list"]} ${hashClasses["list-receipt"]}`}>
                             <li className={hashClasses["list-item"]}>
                                 <i
                                     className={`
