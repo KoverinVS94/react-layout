@@ -74,3 +74,72 @@ h2.title {
     color: $color-white;
   }
 }
+
+.fast-credit-info {
+
+  margin-bottom: 135px;
+
+  h2 {
+    color: $color-green;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .sub-title {
+    margin-bottom: 50px;
+    color: #636363;
+    font-family: $font-secondary;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+  }
+}
+
+.service-help-info {
+
+  h2 {
+    color: $color-green;
+    margin-bottom: 40px;
+  }
+
+  p {
+    margin-bottom: 25px;
+    color: #636363;
+    font-size: 16px;
+    font-weight: 300;
+
+    strong {
+      
+      font-weight: 700;
+    }
+
+    &:last-child {
+
+      color: #535353;
+    }
+  }
+
+  ul {
+
+    margin-bottom: 30px;
+    padding-left: 18px;
+
+    li {
+
+      &:before {
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        margin: 0px 15px 2px 0;
+        background: $color-green;
+        content: '';
+      }
+
+      &:not(:last-child) {
+
+        margin-bottom: 15px;
+      }
+    } 
+  }
+}

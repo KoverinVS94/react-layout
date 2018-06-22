@@ -18,7 +18,7 @@ import {
 import { Preloader } from "../Preloader";
 
 import { NotFoundRoute } from "./NotFoundRoute";
-import { SectionMain, SectionReceipt, SectionHowItWork } from "../Sections";
+import { SectionMain, SectionReceipt, SectionHowItWork, SectionService } from "../Sections";
 
 export interface LayoutProps {
     domain: string;
@@ -42,6 +42,7 @@ export class Layout extends React.Component<LayoutProps> {
                     <SectionMain />
                     <SectionReceipt />
                     <SectionHowItWork />
+                    <SectionService />
                 </ReactCreditCalculator>
             </Preloader>
         );
