@@ -1,6 +1,21 @@
 .icon {
-  display: block;
+  display: inline-block;
   background-repeat: no-repeat;
+
+  &.bordered {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    
+    border-radius: 50%;
+    border:7px solid white;
+    background-color: #64bb1f;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 2px 4px 13px rgba(31, 31, 31, 0.26);
+    content: ''; 
+  }
   
   &-info {
     width: 28px;
@@ -132,6 +147,12 @@
       height: 37px;
       background-image: url('images/bank.svg');
     }
+  }
+
+  &-adress {
+    width: 31px;
+    height: 29px;
+    background-image: url('images/icon-adress.svg');
   }
 }
 

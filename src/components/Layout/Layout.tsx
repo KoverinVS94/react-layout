@@ -18,6 +18,7 @@ import {
 import { Preloader } from "../Preloader";
 
 import { NotFoundRoute } from "./NotFoundRoute";
+import { Footer } from "./Footer";
 import { SectionMain, SectionReceipt, SectionHowItWork, SectionService } from "../Sections";
 
 export interface LayoutProps {
@@ -43,6 +44,7 @@ export class Layout extends React.Component<LayoutProps> {
                     <SectionReceipt />
                     <SectionHowItWork />
                     <SectionService />
+                    <Footer />
                 </ReactCreditCalculator>
             </Preloader>
         );

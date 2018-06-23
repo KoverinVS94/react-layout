@@ -10,8 +10,13 @@ h1.title {
 }
 
 h2.title {
-  font-size: 45px;
+  font-size: 2.813em;
   font-weight: 400;
+}
+
+h3.title {
+  font-size: 1.125em;
+  font-weight: 700;
 }
 
 .sub-title {
@@ -20,19 +25,6 @@ h2.title {
 }
 
 .section-receipt {
-
-  .list {
-
-    .list-item {
-
-      span {
-        color: #686868;
-        font-size: 1.125em;
-        font-weight: 500;
-        font-family: $font-secondary;
-      }
-    }
-  }
 
   h2 {
     margin-bottom: 1.111em;
@@ -51,15 +43,15 @@ h2.title {
 
   h2 {
     color: $color-white;
-    margin-bottom: 40px;
+    margin-bottom: 2.5em;
   }
 
   & > .container {
     
     & > p {
 
-      margin-bottom: 65px;
-      font-size: 18px;
+      margin-bottom: 4.063em;
+      font-size: 1.125em;
       font-weight: 300;
     }
   }
@@ -77,20 +69,20 @@ h2.title {
 
 .fast-credit-info {
 
-  margin-bottom: 135px;
+  margin-bottom: 8.438em;
 
   h2 {
     color: $color-green;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: .889em;
   }
 
   .sub-title {
-    margin-bottom: 50px;
+    margin-bottom: 2.5em;
     color: #636363;
     font-family: $font-secondary;
     text-align: center;
-    font-size: 20px;
+    font-size: 1.25em;
     font-weight: 300;
   }
 }
@@ -99,13 +91,13 @@ h2.title {
 
   h2 {
     color: $color-green;
-    margin-bottom: 40px;
+    margin-bottom: .889em;
   }
 
   p {
-    margin-bottom: 25px;
+    margin-bottom: 1.563em;
     color: #636363;
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 300;
 
     strong {
@@ -121,8 +113,8 @@ h2.title {
 
   ul {
 
-    margin-bottom: 30px;
-    padding-left: 18px;
+    margin-bottom: 1.875em;
+    padding-left: 1.125em;
 
     li {
 
@@ -131,15 +123,70 @@ h2.title {
         width: 5px;
         height: 5px;
         border-radius: 50%;
-        margin: 0px 15px 2px 0;
+        margin: 0 .938em .125em 0;
         background: $color-green;
         content: '';
       }
 
       &:not(:last-child) {
 
-        margin-bottom: 15px;
+        margin-bottom: .938em;
       }
     } 
+  }
+}
+
+.footer {
+
+  .footer-main {
+
+    h3 {
+      color: #fffefe;
+      margin-bottom: 1em;
+    }
+
+    p {
+      color: #d8ffb8;
+      font-size: .75em;
+
+      &:not(:last-child) {
+
+        margin-bottom: 1.5em;
+      }
+    }
+  }
+
+  .footer-aside {
+
+    .contacts {
+      margin-bottom: 1.938em;
+
+      a {
+        display: block;
+        color: #fff;
+        font-size: .875em;
+
+        &:first-child {
+
+          font-size: 1.25em;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .working-hours {
+
+      span {
+        display: block;
+        color: #d8ffb8;
+        font-size: .875em;
+
+        &:first-child {
+
+          font-size: 1em;
+          font-weight: 700;
+        }
+      }
+    }
   }
 }

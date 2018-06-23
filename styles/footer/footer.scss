@@ -1,0 +1,51 @@
+/*
+Footer style
+*/
+
+.footer {
+
+  .footer-top {
+    padding: 2.813em 0 2.5em 0;
+    background: #65bc1f;
+
+    .footer-main {
+
+      @include span(10 of 12 inside no-gutter);
+      padding-right: 138px;
+      }
+
+    .footer-aside {
+      
+      @include span(2 of 12 inside no-gutter);
+
+    }
+  }
+
+  .footer-bottom {
+    padding: 1.563em 0;
+    background: #52ad0a;
+  
+    .icon {
+      display: inline-block;
+      margin-right: .938em;
+      vertical-align: middle;
+    }
+  
+    .adress {
+      display: inline-block;
+      vertical-align: middle;
+  
+      span {
+        display: block;
+        color: #fff;
+        font-size: .875em;
+  
+        &:first-child {
+          font-size: 1em;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+

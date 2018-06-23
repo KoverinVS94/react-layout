@@ -51,20 +51,20 @@
     }
   }
   .dot {
+    position: absolute;
+    top: 30px;
     color: #909090;
     font-size: 11px;
-  }
 
-  .left-dot {
-    position: absolute;
-    top: 30px;
-    left: 0;
-  }
+    &-left {
 
-  .right-dot {
-    position: absolute;
-    top: 30px;
-    right: 0;
+      left: 0;
+    }
+
+    &-right {
+      
+      right: 0;
+    }
   }
 }
 

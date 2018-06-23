@@ -81,7 +81,7 @@ Lists style
       span {
         display: inline-block;
         min-width: 310px;
-        font-size: 22px;
+        font-size: 1.375em;
         font-weight: 700;
       }
     }
@@ -89,7 +89,7 @@ Lists style
 
   .list-step {
 
-    margin-bottom: 140px;
+    margin-bottom: 8.75em;
 
     .list-item {
 
@@ -114,21 +114,37 @@ Lists style
 
           font-style: normal;
           color: #f4ffed;
-          font-size: 24px;
+          font-size: 1.5em;
           font-weight: 700;
         }
       }
 
       span {
         display: inline-block;
-        font-size: 26px;
+        font-size: 1.625em;
         font-weight: 700;
-        margin-bottom: 20px;
+        margin-bottom: 1.250em;
       }
 
       p {
         font-weight: 300;
         max-width: 310px;
+      }
+    }
+  }
+}
+
+.section-receipt {
+
+  .list {
+
+    .list-item {
+
+      span {
+        color: #686868;
+        font-size: 1.125em;
+        font-weight: 500;
+        font-family: $font-secondary;
       }
     }
   }

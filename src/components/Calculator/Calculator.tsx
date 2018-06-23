@@ -38,10 +38,10 @@ export class Calculator extends React.Component<{}, CalculatorState> {
                                 </div>
                                 <div className={hashClasses["wrap-rc-slider"]}>
                                     <CalculatorSlider />
-                                    <span className={`${hashClasses["dot"]} ${hashClasses["left-dot"]}`}>
+                                    <span className={`${hashClasses["dot"]} ${hashClasses["dot-left"]}`}>
                                         {this.conditions.amount.min}
                                     </span>
-                                    <span className={`${hashClasses["dot"]} ${hashClasses["right-dot"]}`}>
+                                    <span className={`${hashClasses["dot"]} ${hashClasses["dot-right"]}`}>
                                         {this.conditions.amount.max}
                                     </span>
                                 </div>
@@ -59,10 +59,10 @@ export class Calculator extends React.Component<{}, CalculatorState> {
                                 </div>
                                 <div className={hashClasses["wrap-rc-slider"]}>
                                     <CalculatorSlider />
-                                    <span className={`${hashClasses["dot"]} ${hashClasses["left-dot"]}`}>
+                                    <span className={`${hashClasses["dot"]} ${hashClasses["dot-left"]}`}>
                                         {this.conditions.term.min}
                                     </span>
-                                    <span className={`${hashClasses["dot"]} ${hashClasses["right-dot"]}`}>
+                                    <span className={`${hashClasses["dot"]} ${hashClasses["dot-right"]}`}>
                                         {this.conditions.term.max}
                                     </span>
                                 </div>
