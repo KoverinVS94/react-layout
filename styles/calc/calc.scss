@@ -7,6 +7,14 @@
   position: relative;
   z-index: 10;
 
+  @include breakpoint($mobile) {
+    padding: 0 10px;
+  }
+
+  @include breakpoint($tablet-laptop-sm) {
+    padding: 0 50px;
+  }
+
   .calc-main {
     position: relative;
     padding: 2.5em;
@@ -18,9 +26,24 @@
 
     @include clearfix;
 
+    @include breakpoint($mobile-p) {
+
+      padding: 2.5em 1.5em;
+    }
+
     .calc-content {
 
       @include span(6.75 of 12 inside no-gutter);
+
+      @include breakpoint($mobile) {
+        width: 100%;
+        float: none;
+      }
+
+      @include breakpoint($tablet-p) {
+        width: 100%;
+        float: none;
+      }
     }
 
     .calc-aside {
@@ -29,8 +52,39 @@
       
       @include span(5.25 of 12 inside no-gutter);
 
+      @include breakpoint($mobile) {
+        width: 100%;
+        float: none;
+      }
+
+      @include breakpoint($mobile-p) {
+        margin-top: 50px;
+      }
+
+      @include breakpoint($mobile-l) {
+        text-align: center;
+        margin-top: 40px; 
+      }
+
+      @include breakpoint($tablet-p) {
+        width: 100%;
+        float: none;
+        text-align: center;
+        margin-top: 40px; 
+      }
+
       .btn-action {
         margin-bottom: 1em;
+
+        @include breakpoint($mobile-l) {
+          display: block;
+          margin: 0 auto;
+        }
+
+        @include breakpoint($tablet-p) {
+          display: block;
+          margin: 0 auto;
+        }
       }
 
       p {
@@ -42,6 +96,28 @@
         font-size: .875em;
         line-height: 18px;
 
+        @include breakpoint($mobile) {
+          width: 100%;
+          float: none;
+        }
+
+        @include breakpoint($mobile-p) {
+          text-align: center;
+        }
+
+        @include breakpoint($mobile-l) {
+          display: block;
+          margin: 20px 0 0 0;
+          padding: 0;
+        }
+
+        @include breakpoint($tablet-p) {
+          display: block;
+          width: 100%;
+          margin: 20px 0 0 0;
+          padding: 0;
+          float: none;
+        }
       }
     }
   }
@@ -57,9 +133,18 @@
 
     @include clearfix;
 
+    @include breakpoint($mobile-p) {
+      padding: 20px;
+    }
+
     .sum-return {
 
       float:left;
+
+      @include breakpoint($mobile) {
+        float: none;
+        text-align: center;
+      }
 
       span {
 
@@ -77,17 +162,27 @@
     }
 
     .text-percent {
-      display: table;
       float: right;
-      
-      .wrap-icon {
-        display: table-cell;
-        vertical-align: middle;
+
+      @include justify-content;
+
+      @include valign-center;
+
+
+      @include breakpoint($mobile) {
+        float: none;
+        margin: 10px auto 0 auto;
       }
-      
+
+      @include breakpoint($mobile-p) {
+        width: 280px;
+      }
+
+      @include breakpoint($mobile-l) {
+        width: 290px;
+      }
 
       p {
-        display: table-cell;
         width: 265px;
         padding-left: .938em;
 
@@ -102,8 +197,18 @@
   .form-group {
     display: table;
 
+    @include clearfix;
+
+    @include breakpoint($mobile) {
+      display: block;
+    }
+
     &:not(:last-child) {
       margin-bottom: 1.875em;
+
+      @include breakpoint($mobile-p) {
+        margin-bottom: 2.875em;
+      }
     }
 
     .wrap-label,
@@ -116,6 +221,12 @@
   
     .wrap-label {
       width: 20%;
+
+      @include breakpoint($mobile) {
+        display: block;
+        width: 40%;
+        float: left;
+      }
   
       .form-label {
         color: #636363;
@@ -125,11 +236,26 @@
   
     .wrap-rc-slider {
       width: 60%;
+
+      @include breakpoint($mobile) {
+        display: block;
+        width: 100%;
+        float: left;
+        margin-top: 20px;
+      }
     }
   
     .input-group {
       width: 20%;
       padding-left: 2.188em;
+
+      @include breakpoint($mobile) {
+        display: block;
+        width: 60%;
+        padding-left: 0;
+        float: right;
+        text-align: right;
+      }
   
       .form-control {
         width: 138px;
@@ -138,34 +264,44 @@
     }
   
     .credit-sum {
-      
-      &:after {
-        display: block;
-        position: absolute;
-        top: 13px;
-        left: 125px;
 
-        color: #bbbaba;
-        font-size: 1em;
-        pointer-events: none;
-        content: 'грн.';
+      .input-wrap {
+        position: relative;
+        display: inline-block;
+              
+        &:after {
+          display: block;
+          position: absolute;
+          top: 13px;
+          left: 90px;
+
+          color: #bbbaba;
+          font-size: 1em;
+          pointer-events: none;
+          content: 'грн.';
+        }
       }
     }
   
     .credit-term {
 
-      &:after {
-        display: block;
-        position: absolute;
-        top: 13px;
-        left: 95px;
-        
-        color: #bbbaba;
-        font-size: 1em;
-        pointer-events: none;
-        content: 'дней';
+      .input-wrap {
+        position: relative;
+        display: inline-block;
+
+        &:after {
+          display: block;
+          position: absolute;
+          top: 13px;
+          left: 65px;
+          
+          color: #bbbaba;
+          font-size: 1em;
+          pointer-events: none;
+          content: 'дней';
+        }
       }
-  
+
       .form-control {
   
         padding-right: 2.857em;

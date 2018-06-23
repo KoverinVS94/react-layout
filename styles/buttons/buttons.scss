@@ -15,6 +15,11 @@
   &:hover {
     background-color: #e760ff;
   }
+
+  @include breakpoint($mobile-p) {
+    
+    width: 100%;
+  }
 }
 .fast-credit-info {
 

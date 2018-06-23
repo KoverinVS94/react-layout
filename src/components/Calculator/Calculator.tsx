@@ -11,6 +11,8 @@ import {
     CalculatorLabel
 } from "react-credit-calculator";
 
+import { OnMobile, OnMobileTablet, OnTabletDesktop, OnDesktop } from "react-breakpoint";
+
 const hashClasses = require("main.scss");
 
 interface CalculatorState {
@@ -36,6 +38,13 @@ export class Calculator extends React.Component<{}, CalculatorState> {
                                         Сумма:
                                     </label>
                                 </div>
+                                <OnMobile>
+                                    <div className={`${hashClasses["input-group"]} ${hashClasses["credit-sum"]}`}>
+                                        <div className={hashClasses["input-wrap"]}>
+                                            <CalculatorInput type="number" className={hashClasses["form-control"]} />
+                                        </div>
+                                    </div>
+                                </OnMobile>
                                 <div className={hashClasses["wrap-rc-slider"]}>
                                     <CalculatorSlider />
                                     <span className={`${hashClasses["dot"]} ${hashClasses["dot-left"]}`}>
@@ -45,9 +54,13 @@ export class Calculator extends React.Component<{}, CalculatorState> {
                                         {this.conditions.amount.max}
                                     </span>
                                 </div>
-                                <div className={`${hashClasses["input-group"]} ${hashClasses["credit-sum"]}`}>
-                                    <CalculatorInput type="number" className={hashClasses["form-control"]} />
-                                </div>
+                                <OnTabletDesktop>
+                                    <div className={`${hashClasses["input-group"]} ${hashClasses["credit-sum"]}`}>
+                                        <div className={hashClasses["input-wrap"]}>
+                                            <CalculatorInput type="number" className={hashClasses["form-control"]} />
+                                        </div>
+                                    </div>
+                                </OnTabletDesktop>
                             </div>
                         </CalculatorControlWrapper>
                         <CalculatorControlWrapper type={CalculatorControlTypes.term}>
@@ -57,6 +70,13 @@ export class Calculator extends React.Component<{}, CalculatorState> {
                                         На срок:
                                     </label>
                                 </div>
+                                <OnMobile>
+                                    <div className={`${hashClasses["input-group"]} ${hashClasses["credit-term"]}`}>
+                                        <div className={hashClasses["input-wrap"]}>
+                                            <CalculatorInput type="number" className={hashClasses["form-control"]} />
+                                        </div>
+                                    </div>
+                                </OnMobile>
                                 <div className={hashClasses["wrap-rc-slider"]}>
                                     <CalculatorSlider />
                                     <span className={`${hashClasses["dot"]} ${hashClasses["dot-left"]}`}>
@@ -66,9 +86,13 @@ export class Calculator extends React.Component<{}, CalculatorState> {
                                         {this.conditions.term.max}
                                     </span>
                                 </div>
-                                <div className={`${hashClasses["input-group"]} ${hashClasses["credit-term"]}`}>
-                                    <CalculatorInput type="number" className={hashClasses["form-control"]} />
-                                </div>
+                                <OnTabletDesktop>
+                                    <div className={`${hashClasses["input-group"]} ${hashClasses["credit-term"]}`}>
+                                        <div className={hashClasses["input-wrap"]}>
+                                            <CalculatorInput type="number" className={hashClasses["form-control"]} />
+                                        </div>
+                                    </div>
+                                </OnTabletDesktop>
                             </div>
                         </CalculatorControlWrapper>
                     </div>
@@ -79,13 +103,17 @@ export class Calculator extends React.Component<{}, CalculatorState> {
                 </div>
                 <div className={hashClasses["calc-bottom"]}>
                     <div className={hashClasses["sum-return"]}>
-                        <span>Сумма к возврату:</span>
-                        <CalculatorLabel labelType={CalculatorLabelTypes.total} /> грн.
+                        <OnDesktop>
+                            <span>Сумма к возврату:</span>
+                            <CalculatorLabel labelType={CalculatorLabelTypes.total} /> грн.
+                        </OnDesktop>
+                        <OnMobileTablet>
+                            <span>К возврату:</span>
+                            <CalculatorLabel labelType={CalculatorLabelTypes.total} /> грн.
+                        </OnMobileTablet>
                     </div>
                     <div className={hashClasses["text-percent"]}>
-                        <div className={hashClasses["wrap-icon"]}>
-                            <i className={`${hashClasses["icon"]} ${hashClasses["icon-info"]}`} />
-                        </div>
+                        <i className={`${hashClasses["icon"]} ${hashClasses["icon-info"]}`} />
                         <p>Наша APR (максимальная годовая процентная ставка) составляет 638,75%.</p>
                     </div>
                 </div>

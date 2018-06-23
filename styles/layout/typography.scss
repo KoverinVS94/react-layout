@@ -7,6 +7,15 @@ h1.title {
   font-weight: 400;
   margin-bottom: .8em;
   text-transform: uppercase;
+
+  @include breakpoint($mobile) {
+    font-size: 30px;
+    margin-bottom: 8px;
+  }
+
+  @include breakpoint($tablet-p) {
+    font-size: 33px;
+  }
 }
 
 h2.title {
@@ -22,6 +31,18 @@ h3.title {
 .sub-title {
   font-size: 1.5em;
   line-height: 29px;
+
+  @include breakpoint($mobile-p) {
+    font-size: 20px;
+  }
+
+  @include breakpoint($mobile-l) {
+    font-size: 22px;
+  }
+
+  @include breakpoint($tablet-p) {
+    font-size: 22px;
+  }
 }
 
 .section-receipt {
