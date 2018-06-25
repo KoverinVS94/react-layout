@@ -23,11 +23,33 @@ Lists style
 
   margin-bottom: 4.063em;
 
+  @include clearfix;
+
   @include justify-content;
+
+  @include breakpoint($tablet-p) {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  @include breakpoint($mobile) {
+    display: block;
+    margin-bottom: 0;
+  }
 
   .list-item {
 
     text-align: center;
+
+    @include breakpoint($mobile) {
+      margin-bottom: 50px;
+    }
+
+    @include breakpoint($tablet-p) {
+      width: 50%;
+      float: left;
+      margin-bottom: 50px;
+    }
 
     .icon {
       position: relative;
@@ -72,6 +94,14 @@ Lists style
 
     .list-item {
 
+      &:last-child {
+
+        @include breakpoint($tablet-p) {
+          
+          width: 100%;
+        }
+      }
+ 
       .icon {
         background: #68ce1a;
         border: 6px solid white;
@@ -83,6 +113,11 @@ Lists style
         min-width: 310px;
         font-size: 1.375em;
         font-weight: 700;
+
+        @include breakpoint($mobile) {
+          
+          min-width: auto;
+        }
       }
     }
   }
@@ -91,7 +126,26 @@ Lists style
 
     margin-bottom: 8.75em;
 
+    @include breakpoint($mobile) {
+          
+      margin-bottom: 4.75em;
+    }
+
+    @include breakpoint($tablet-p) {
+          
+      margin-bottom: 4.75em;
+    }
+
     .list-item {
+
+      &:last-child {
+
+        @include breakpoint($tablet-p) {
+
+          width: 100%;
+        }
+
+      }
 
       .icon {
         background: #68ce1a;
@@ -129,6 +183,16 @@ Lists style
       p {
         font-weight: 300;
         max-width: 310px;
+
+        @include breakpoint($mobile) {
+          
+          margin: 0 auto;
+        }
+
+        @include breakpoint($tablet-p) {
+          
+          margin: 0 auto;
+        }
       }
     }
   }

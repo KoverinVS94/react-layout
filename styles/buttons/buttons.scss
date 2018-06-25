@@ -28,5 +28,11 @@
     display: block;
     width: 413px;
     margin: 0 auto;
+
+    @include breakpoint($mobile-p) {
+    
+      width: 100%;
+      font-size: 20px;
+    }
   }
 }

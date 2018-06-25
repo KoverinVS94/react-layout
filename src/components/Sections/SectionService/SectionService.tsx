@@ -2,6 +2,8 @@ import * as React from "react";
 
 const hashClasses = require("main.scss");
 
+import { OnMobile, OnTabletDesktop } from "react-breakpoint";
+
 export class SectionService extends React.Component {
 
     public render(): React.ReactNode {
@@ -18,9 +20,14 @@ export class SectionService extends React.Component {
                                 можете подать заявку на кредит в наше сервисе,
                                 независимо от цели, наличия справки с работы, справки о доходах.
                             </p>
-                            <button className={hashClasses["btn-action"]}>
-                                Оформить заявку на кредит
-                            </button>
+                                <button className={hashClasses["btn-action"]}>
+                                    <OnTabletDesktop>
+                                        Оформить заявку на кредит
+                                    </OnTabletDesktop>
+                                    <OnMobile>
+                                        Оформить заявку
+                                    </OnMobile>
+                                </button>
                         </div>
                         <div className={hashClasses["service-help-info"]}>
                             <h2 className={hashClasses["title"]}>

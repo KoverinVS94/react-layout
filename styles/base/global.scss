@@ -73,6 +73,17 @@ p {
 .section {
 
   padding: 7.813em 0;
+
+  @include breakpoint($tablet-laptop-sm) {
+
+    padding-left: 50px;
+    padding-right: 50px; 
+  }
+
+  @include breakpoint($mobile) {
+
+    padding: 3.813em 30px; 
+  }
 }
 
 .section-how-it-work {
