@@ -43,12 +43,12 @@ p {
 
   @include breakpoint($mobile-p) {
 
-    padding: 20px 0 40px 0;
+    padding: 1.25em 0 2.5em 0;
   }
 
   @include breakpoint($mobile-l) {
 
-    padding: 25px 0 50px 0;
+    padding: 1.563em 0 3.125em 0;
   }
 
   .overlay {
@@ -58,9 +58,10 @@ p {
 
     @include breakpoint($mobile) {
       width: 100%;
-      padding: 0 40px 0 40px;
+      padding: 0 2.5em;
+      
       text-align: center;
-      margin: 0 0 25px 0;
+      margin: 0 0 1.563em 0;
     }
 
     @include breakpoint($tablet-laptop-sm) {
@@ -76,13 +77,12 @@ p {
 
   @include breakpoint($tablet-laptop-sm) {
 
-    padding-left: 50px;
-    padding-right: 50px; 
+    padding: 7.813em 3.125em;
   }
 
   @include breakpoint($mobile) {
 
-    padding: 3.813em 30px; 
+    padding: 3.813em 1.875em; 
   }
 }
 
@@ -117,7 +117,7 @@ p {
     }
 
     @include breakpoint($tablet-p) {
-      top: 356px;
+      top: 336px;
     }
   }
 
@@ -150,10 +150,11 @@ p {
       }
 
       @include breakpoint($tablet-laptop-sm) {
-        top: -408px;
-        right: -45px;
         width: 747px;
         height: 509px;
+        top: -408px;
+        right: -45px;
+
         background-image: url('images/illustration-tablet.png');
       }
     }

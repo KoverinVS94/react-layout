@@ -9,12 +9,12 @@ h1.title {
   text-transform: uppercase;
 
   @include breakpoint($mobile) {
-    font-size: 30px;
-    margin-bottom: 8px;
+    font-size: 1.875em;
+    margin-bottom: .5em;
   }
 
   @include breakpoint($tablet-p) {
-    font-size: 33px;
+    font-size: 2.063em;
   }
 }
 
@@ -24,11 +24,11 @@ h2.title {
 
   @include breakpoint($mobile) {
     text-align: center;
-    font-size: 35px;
+    font-size: 2.188em;
   }
 
   @include breakpoint($iphone5-p) {
-    font-size: 29px;
+    font-size: 1.813em;
   }
 }
 
@@ -39,18 +39,14 @@ h3.title {
 
 .sub-title {
   font-size: 1.5em;
-  line-height: 29px;
+  line-height: 1.813em;
 
   @include breakpoint($mobile) {
-    font-size: 20px;
-  }
-
-  @include breakpoint($mobile-l) {
-    font-size: 22px;
+    font-size: 1.25em;
   }
 
   @include breakpoint($tablet-p) {
-    font-size: 22px;
+    font-size: 1.375em;
   }
 }
 
@@ -207,7 +203,6 @@ h3.title {
         font-size: .875em;
 
         &:first-child {
-
           font-size: 1.25em;
           font-weight: 700;
         }
@@ -222,7 +217,6 @@ h3.title {
         font-size: .875em;
 
         &:first-child {
-
           font-size: 1em;
           font-weight: 700;
         }

@@ -9,41 +9,43 @@ Footer style
     background: #65bc1f;
 
     @include breakpoint($tablet-laptop-sm) {
-      padding: 2.813em 50px 2.5em 50px;
+
+      padding: 2.813em 3.125em 2.5em 3.125em;
     }
 
     @include breakpoint($mobile) {
-      padding: 2.813em 30px 2.5em 30px;
+
+      padding: 2.813em 1.875em 2.5em 1.875em;
     }
 
     .footer-main {
       @include span(10 of 12 inside no-gutter);
-      padding-right: 138px;
+      padding-right: 8.625em;
 
       @include breakpoint($mobile-p) {
         width: 100%;
         padding-right: 0;
-        padding-bottom: 30px;
+        padding-bottom: 1.875em;
       }
 
       @include breakpoint($mobile-l) {
         width: 70%;
-        padding-right: 70px;
+        padding-right: 4.375em;
       }
 
       @include breakpoint($iphone5-l) {
         width: 65%;
-        padding-right: 50px;
+        padding-right: 3.125em;
       }
 
       @include breakpoint($tablet-p) {
         width: 70%;
-        padding-right: 70px;
+        padding-right: 4.375em;
       }
 
       @include breakpoint($tablet-l) {
         width: 78%;
-        padding-right: 80px;
+        padding-right: 5em;
       }
     }
 
@@ -52,22 +54,27 @@ Footer style
       @include span(2 of 12 inside no-gutter);
 
       @include breakpoint($mobile-p) {
+
         width: 100%;
       }
 
       @include breakpoint($mobile-l) {
+
         width: 30%;
       }
 
       @include breakpoint($iphone5-l) {
+
         width: 35%;
       }
 
       @include breakpoint($tablet-p) {
+
         width: 30%;
       }
 
       @include breakpoint($tablet-l) {
+
         width: 22%;
       }
     }
@@ -77,14 +84,16 @@ Footer style
     padding: 1.563em 0;
     background: #52ad0a;
 
-    @include breakpoint($tablet-laptop-sm) {
-      padding: 1.563em 50px;
+    @include breakpoint($mobile) {
+      
+      padding: 1.563em 1.875em;
     }
 
-    @include breakpoint($mobile) {
-      padding: 1.563em 30px;
+    @include breakpoint($tablet-laptop-sm) {
+
+      padding: 1.563em 3.125em;
     }
-  
+
     .icon {
       display: inline-block;
       margin-right: .938em;
@@ -101,7 +110,8 @@ Footer style
         font-size: .875em;
 
         @include breakpoint($iphone5-p) {
-          font-size: 11px;
+
+          font-size: 0.688em;
         }
   
         &:first-child {

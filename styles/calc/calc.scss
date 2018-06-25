@@ -6,14 +6,13 @@
 
   position: relative;
   z-index: 10;
-  display: none;
 
   @include breakpoint($mobile-p) {
-    padding: 0 10px;
+    padding: 0 .625em;
   }
 
   @include breakpoint($tablet-laptop-sm) {
-    padding: 0 50px;
+    padding: 0 3.125em;
   }
 
   .calc-main {
@@ -59,22 +58,23 @@
       }
 
       @include breakpoint($mobile-p) {
-        margin-top: 50px;
+        margin-top: 3.125em;
       }
 
       @include breakpoint($mobile-l) {
         text-align: center;
-        margin-top: 40px; 
+        margin-top: 2.5em; 
       }
 
       @include breakpoint($tablet-p) {
         width: 100%;
         float: none;
         text-align: center;
-        margin-top: 40px; 
+        margin-top: 2.5em; 
       }
 
       .btn-action {
+        
         margin-bottom: 1em;
 
         @include breakpoint($mobile-l) {
@@ -108,14 +108,14 @@
 
         @include breakpoint($mobile-l) {
           display: block;
-          margin: 20px 0 0 0;
+          margin: 1.25em 0 0 0;
           padding: 0;
         }
 
         @include breakpoint($tablet-p) {
           display: block;
           width: 100%;
-          margin: 20px 0 0 0;
+          margin: 1.25em 0 0 0;
           padding: 0;
           float: none;
         }
@@ -135,7 +135,8 @@
     @include clearfix;
 
     @include breakpoint($mobile-p) {
-      padding: 20px;
+
+      padding: 1.25em;
     }
 
     .sum-return {
@@ -169,10 +170,9 @@
 
       @include valign-center;
 
-
       @include breakpoint($mobile) {
         float: none;
-        margin: 10px auto 0 auto;
+        margin: .625em auto 0 auto;
       }
 
       @include breakpoint($mobile-p) {
@@ -242,7 +242,7 @@
         display: block;
         width: 100%;
         float: left;
-        margin-top: 20px;
+        margin-top: 1.25em;
       }
     }
   

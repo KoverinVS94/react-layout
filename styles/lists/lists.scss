@@ -42,13 +42,13 @@ Lists style
     text-align: center;
 
     @include breakpoint($mobile) {
-      margin-bottom: 50px;
+      margin-bottom: 3.125em;
     }
 
     @include breakpoint($tablet-p) {
       width: 50%;
       float: left;
-      margin-bottom: 50px;
+      margin-bottom: 3.125em;
     }
 
     .icon {
