@@ -8,22 +8,82 @@ Footer style
     padding: 2.813em 0 2.5em 0;
     background: #65bc1f;
 
-    .footer-main {
+    @include breakpoint($tablet-laptop-sm) {
+      padding: 2.813em 50px 2.5em 50px;
+    }
 
+    @include breakpoint($mobile) {
+      padding: 2.813em 30px 2.5em 30px;
+    }
+
+    .footer-main {
       @include span(10 of 12 inside no-gutter);
       padding-right: 138px;
+
+      @include breakpoint($mobile-p) {
+        width: 100%;
+        padding-right: 0;
+        padding-bottom: 30px;
       }
+
+      @include breakpoint($mobile-l) {
+        width: 70%;
+        padding-right: 70px;
+      }
+
+      @include breakpoint($iphone5-l) {
+        width: 65%;
+        padding-right: 50px;
+      }
+
+      @include breakpoint($tablet-p) {
+        width: 70%;
+        padding-right: 70px;
+      }
+
+      @include breakpoint($tablet-l) {
+        width: 78%;
+        padding-right: 80px;
+      }
+    }
 
     .footer-aside {
       
       @include span(2 of 12 inside no-gutter);
 
+      @include breakpoint($mobile-p) {
+        width: 100%;
+      }
+
+      @include breakpoint($mobile-l) {
+        width: 30%;
+      }
+
+      @include breakpoint($iphone5-l) {
+        width: 35%;
+      }
+
+      @include breakpoint($tablet-p) {
+        width: 30%;
+      }
+
+      @include breakpoint($tablet-l) {
+        width: 22%;
+      }
     }
   }
 
   .footer-bottom {
     padding: 1.563em 0;
     background: #52ad0a;
+
+    @include breakpoint($tablet-laptop-sm) {
+      padding: 1.563em 50px;
+    }
+
+    @include breakpoint($mobile) {
+      padding: 1.563em 30px;
+    }
   
     .icon {
       display: inline-block;
@@ -39,6 +99,10 @@ Footer style
         display: block;
         color: #fff;
         font-size: .875em;
+
+        @include breakpoint($iphone5-p) {
+          font-size: 11px;
+        }
   
         &:first-child {
           font-size: 1em;
