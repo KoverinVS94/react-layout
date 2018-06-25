@@ -113,6 +113,11 @@ p {
   & > .container {
     position: relative;
 
+    @include breakpoint($mobile-l) {
+      
+      width: 500px;
+    }
+
     &:before {
       display: block;
       width: 747px;

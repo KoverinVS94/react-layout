@@ -6,8 +6,9 @@
 
   position: relative;
   z-index: 10;
+  display: none;
 
-  @include breakpoint($mobile) {
+  @include breakpoint($mobile-p) {
     padding: 0 10px;
   }
 
