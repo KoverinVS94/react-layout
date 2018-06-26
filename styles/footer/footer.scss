@@ -94,10 +94,15 @@ Footer style
       padding: 1.563em 3.125em;
     }
 
-    .icon {
+    .icon,
+    .adress {
       display: inline-block;
-      margin-right: .938em;
       vertical-align: middle;
+    }
+    
+    .icon {
+      
+      margin-right: .938em;
     }
   
     .adress {
@@ -111,7 +116,7 @@ Footer style
 
         @include breakpoint($iphone5-p) {
 
-          font-size: 0.688em;
+          font-size: .688em;
         }
   
         &:first-child {

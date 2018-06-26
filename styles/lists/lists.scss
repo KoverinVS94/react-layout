@@ -14,7 +14,7 @@ Lists style
 
           top: 58%;
         }
-      }   
+      }
     }
   }
 }
@@ -23,13 +23,16 @@ Lists style
 
   margin-bottom: 4.063em;
 
-  @include clearfix;
-
   @include justify-content;
 
   @include breakpoint($tablet-p) {
     display: block;
     margin-bottom: 0;
+  }
+
+  @include breakpoint($tablet) {
+
+    @include clearfix;
   }
 
   @include breakpoint($mobile) {
