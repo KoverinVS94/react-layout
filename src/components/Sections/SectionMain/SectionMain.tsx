@@ -11,6 +11,8 @@ import {
     CalculatorLabel
 } from "react-credit-calculator";
 
+import { OnMobile, OnTabletDesktop } from "react-breakpoint";
+
 const hashClasses = require("main.scss");
 
 import { Calculator } from "../../Calculator";
@@ -42,7 +44,12 @@ export class SectionMain extends React.Component {
                                         <CalculatorControlWrapper type={CalculatorControlTypes.amount}>
                                             <div className={hashClasses["form-group"]}>
                                                 <label className={hashClasses["form-label"]}>
-                                                    Сумма кредита:
+                                                    <OnTabletDesktop>
+                                                        Сумма кредита:
+                                                    </OnTabletDesktop>
+                                                    <OnMobile>
+                                                        Сумма:
+                                                    </OnMobile>
                                                 </label>
                                                 <div
                                                     className={`
@@ -60,7 +67,12 @@ export class SectionMain extends React.Component {
                                         <CalculatorControlWrapper type={CalculatorControlTypes.term}>
                                         <div className={hashClasses["form-group"]}>
                                             <label className={hashClasses["form-label"]}>
-                                                Срок кредита:
+                                                <OnTabletDesktop>
+                                                    Срок кредита:
+                                                </OnTabletDesktop>
+                                                <OnMobile>
+                                                    Срок:
+                                                </OnMobile>
                                             </label>
                                             <div
                                                 className={`

@@ -5,7 +5,7 @@
 h1.title {
   font-size: 3.125em;
   font-weight: 400;
-  margin-bottom: .8em;
+  margin-bottom: .46em;
   text-transform: uppercase;
 
   @include breakpoint($mobile) {
@@ -39,7 +39,6 @@ h3.title {
 
 .sub-title {
   font-size: 1.5em;
-  line-height: 1.813em;
 
   @include breakpoint($mobile) {
     font-size: 1.25em;
@@ -69,7 +68,7 @@ h3.title {
 
   h2 {
     color: $color-white;
-    margin-bottom: 2.5em;
+    margin-bottom: .778em;
 
     @include breakpoint($mobile) {
 
@@ -89,12 +88,15 @@ h3.title {
       margin-bottom: 4.063em;
       font-size: 1.125em;
       font-weight: 300;
+
+      strong {
+        font-weight: bold;
+      }
     }
   }
 
   p {
     color: $color-white;
-    font-family: $font-secondary;
   }
 
   span {
@@ -116,8 +118,8 @@ h3.title {
   .sub-title {
     margin-bottom: 2.5em;
     color: #636363;
-    font-family: $font-secondary;
     text-align: center;
+    font-family: $font-secondary;
     font-size: 1.25em;
     font-weight: 300;
   }

@@ -17,6 +17,7 @@
 
   @include breakpoint($mobile-p) {
     width: 100%;
+    padding: .692em 1.346em;
     font-size: 1.25em;
   }
 }

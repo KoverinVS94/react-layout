@@ -30,7 +30,7 @@ module.exports = {
         inline: true,
         open: false,
         historyApiFallback: true,
-        port: 8089
+        port: 8088
     },
     entry: [
         path.resolve("./src/index.tsx")
