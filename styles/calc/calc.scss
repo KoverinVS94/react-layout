@@ -3,7 +3,7 @@
 */
 
 .calc {
-  display: none;
+  
 
   position: relative;
   z-index: 10;
@@ -91,13 +91,13 @@
       }
 
       p {
-        width: 340px;
-        padding: 0 .938em;
+        width: 315px;
         float: right;
 
         color: #bbb;
         font-size: .875em;
         line-height: 18px;
+        text-align: center;
 
         @include breakpoint($mobile) {
           width: 100%;

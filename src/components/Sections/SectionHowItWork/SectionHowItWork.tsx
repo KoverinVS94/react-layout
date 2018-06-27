@@ -10,16 +10,14 @@ export class SectionHowItWork extends React.Component {
                 <div className={`${hashClasses["section"]} ${hashClasses["section-how-it-work"]}`}>
                     <div className={hashClasses["container"]}>
                         <h2 className={hashClasses["title"]}>
-                            Простое взятие кредита
+                            Как получить кредит
                         </h2>
                         <p>
-                            При появлении финансовых трудностей,
-                            вы в любое время можете подать заявку
-                            на кредит в наше сервисе, независимо от цели,
-                            наличия справки с работы,
-                            справки о доходах и кредитной истории,
-                            от цели, наличия справки с
-                            <strong> несколько простых шагов</strong>:
+                            Если вы столкнулись с финансовыми трудностями,
+                            вы можете оформить простой онлайн займ на карту
+                            всего за 7 минут. Не потребуются дополнительные
+                            документы и поручители, получить кредит можно
+                            за несколько шагов:
                         </p>
                         <ul className={`${hashClasses["list"]} ${hashClasses["list-step"]}`}>
                             <li className={hashClasses["list-item"]}>
@@ -30,11 +28,11 @@ export class SectionHowItWork extends React.Component {
                                         ${hashClasses["bordered"]}
                                     `}
                                 />
-                                <span>Выберите срок и сумму</span>
+                                <span>Выберите сумму и срок кредита</span>
                                 <p>
-                                    При появлении финансовых трудностей,
-                                    вы в любое время можете кредитной
-                                    истории, от цели, наличия справки.
+                                    На калькуляторе выберите желаемые сумму
+                                    и срок кредита, вам сразу же будет
+                                    показана полная сумма к оплате с учетом процентов.
                                 </p>
                             </li>
                             <li className={hashClasses["list-item"]}>
@@ -45,11 +43,11 @@ export class SectionHowItWork extends React.Component {
                                         ${hashClasses["bordered"]}
                                     `}
                                 />
-                                <span>Заполните заявку</span>
+                                <span>Заполните короткую форму заявки.</span>
                                 <p>
-                                    При появлении финансовых трудностей,
-                                    вы в любое время можете кредитной истории,
-                                    от цели, наличия справки.
+                                    Заполните короткую анкету:
+                                    укажите личные данные, информацию
+                                    о трудоустройстве и платежной карте.
                                 </p>
                             </li>
                             <li className={hashClasses["list-item"]}>
@@ -60,24 +58,20 @@ export class SectionHowItWork extends React.Component {
                                         ${hashClasses["bordered"]}
                                     `}
                                 />
-                                <span>Деньги на карте</span>
+                                <span>Получите решение.</span>
                                 <p>
-                                    При появлении финансовых трудностей,
-                                    вы в любое время можете кредитной истории,
-                                    от цели, наличия справки.
+                                    Решение по кредиту принимается за
+                                    7 минут и сразу же после одобрения
+                                    деньги будут переведены на вашу карту.
                                 </p>
                             </li>
                         </ul>
                         <h2 className={hashClasses["title"]}>
-                            Способы оплаты кредита
+                            Как вернуть кредит
                         </h2>
                         <p>
-                            При появлении финансовых трудностей,
-                            вы в любое время можете подать заявку
-                            на кредит в наше сервисе, независимо от цели,
-                            наличия справки с работы, справки о доходах
-                            и кредитной истории, от цели, наличия справки с
-                            <strong> несколько простых шагов</strong>:
+                            Специально для удобства клиентов, мы предлагаем
+                            вернуть кредит несколькими удобными способами:
                         </p>
                         <ul className={`${hashClasses["list"]} ${hashClasses["list-pay"]}`}>
                             <li className={hashClasses["list-item"]}>
@@ -88,7 +82,7 @@ export class SectionHowItWork extends React.Component {
                                         ${hashClasses["bordered"]}
                                     `}
                                 />
-                                <span>Кредитной картой <br />в личном кабинете сервиса</span>
+                                <span>Через личный кабинет<br /> с помощью карты.</span>
                             </li>
                             <li className={hashClasses["list-item"]}>
                                 <i
@@ -98,7 +92,7 @@ export class SectionHowItWork extends React.Component {
                                         ${hashClasses["bordered"]}
                                     `}
                                 />
-                                <span>Через терминалы <br />iBox, TYME, EasyPay, City24 </span>
+                                <span>Через сеть<br />терминалов. </span>
                             </li>
                             <li className={hashClasses["list-item"]}>
                                 <i
@@ -108,7 +102,7 @@ export class SectionHowItWork extends React.Component {
                                         ${hashClasses["bordered"]}
                                     `}
                                 />
-                                <span>В отделении любого <br />банка Украины</span>
+                                <span>Через отделение<br /> украинского банка.</span>
                             </li>
                         </ul>
                     </div>

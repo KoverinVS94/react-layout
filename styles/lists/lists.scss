@@ -186,6 +186,7 @@ Lists style
       p {
         font-weight: 300;
         max-width: 310px;
+        margin: 0 auto;
 
         @include breakpoint($mobile) {
           

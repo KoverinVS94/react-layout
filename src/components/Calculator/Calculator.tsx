@@ -98,7 +98,7 @@ export class Calculator extends React.Component<{}, CalculatorState> {
                     </div>
                     <div className={hashClasses["calc-aside"]}>
                         <button className={hashClasses["btn-action"]}>Получить деньги</button>
-                        <p>Сервис работает на прозрачных условиях. Мы не взимаем дополнительных комиссий и платежей.</p>
+                        <p>Мы гарантируем выгодные и прозрачные условия. Скрытые платежи и комиссии отсутствуют.</p>
                     </div>
                 </div>
                 <div className={hashClasses["calc-bottom"]}>

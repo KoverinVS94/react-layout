@@ -26,10 +26,12 @@ export class SectionMain extends React.Component {
                     <div className={hashClasses["container"]}>
                         <div className={hashClasses["overlay"]}>
                             <h1 className={hashClasses["title"]}>
-                                Кредиты на карту до 4 000 гривен
+                                Выгодные онлайн кредиты на карту
                             </h1>
                             <p className={hashClasses["sub-title"]}>
-                                Получите деньги в банке Украины или на карту за 7 минут
+                                Уже 7 минут вы сможете получить до 4000
+                                гривен на карту, или забрать перевод
+                                в отделении банка через час.
                             </p>
                         </div>
                     </div>

@@ -5,7 +5,7 @@
 h1.title {
   font-size: 3.125em;
   font-weight: 400;
-  margin-bottom: .46em;
+  margin-bottom: .4em;
   text-transform: uppercase;
 
   @include breakpoint($mobile) {
@@ -132,11 +132,35 @@ h3.title {
     margin-bottom: .889em;
   }
 
+  h3 {
+    color: $color-green;
+    margin-bottom: .889em;
+    font-size: 25px;
+    font-weight: 300;
+  }
+
+  h4 {
+    color: $color-green;
+    margin-bottom: .889em;
+    font-size: 20px;
+    font-weight: 300;
+  }
+
   p {
-    margin-bottom: 1.563em;
+    margin-bottom: 1em;
     color: #636363;
     font-size: 1em;
     font-weight: 300;
+
+    a {
+
+      color: $color-green;
+
+      &:hover {
+
+        text-decoration: underline;
+      }
+    }
 
     strong {
       

@@ -19,7 +19,7 @@ export class SectionReceipt extends React.Component {
                                         ${hashClasses["bordered"]}
                                     `}
                                 />
-                                <span>Вы должны быть <br/> старше 18 лет</span>
+                                <span>Возраст старше <br /> 18 лет.</span>
                             </li>
                             <li className={hashClasses["list-item"]}>
                                 <i
@@ -29,7 +29,7 @@ export class SectionReceipt extends React.Component {
                                         ${hashClasses["bordered"]}
                                     `}
                                 />
-                                <span>Паспорт гражданина <br/> Украины</span>
+                                <span>Наличие паспорта <br />гражданина Украины.</span>
                             </li>
                             <li className={hashClasses["list-item"]}>
                                 <i
@@ -39,7 +39,7 @@ export class SectionReceipt extends React.Component {
                                         ${hashClasses["bordered"]}
                                     `}
                                 />
-                                <span>Банковская карта <br/> банка Украины</span>
+                                <span>Наличие банковской <br /> карты.</span>
                             </li>
                             <li className={hashClasses["list-item"]}>
                                 <i
@@ -49,16 +49,15 @@ export class SectionReceipt extends React.Component {
                                         ${hashClasses["bordered"]}
                                     `}
                                 />
-                                <span>Идентификационный <br/> код</span>
+                                <span>Наличие <br /> ИНН.</span>
                             </li>
                         </ul>
                         <p>
-                            При появлении финансовых трудностей, вы в любое
-                            время можете подать заявку на кредит в наше сервисе,
-                            независимо от цели, наличия справки с работы,
-                            справки о доходах и кредитной истории,
-                            от цели, наличия справки с
-                            <strong> несколько простых шагов:</strong>
+                            Сервис характеризуется лояльным отношениям к
+                            клиентам и высоким процентом одобрений.
+                            У нас вы можете получить до 4000 гривен на
+                            любые цели, независимо от уровня дохода
+                            и трудоустройства.
                         </p>
                     </div>
                 </div>
