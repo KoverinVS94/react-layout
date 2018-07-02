@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const Webpack = require("webpack");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const meta = require("../meta.json");
 const debug = process.env.NODE_ENV !== "production";
@@ -15,6 +16,10 @@ const envPath = {
 if (!envPath) {
     throw new Error(`${process.env.NODE_ENV} is not supported`);
 }
+
+const sourceMapOptions = {
+    sourceMap: debug
+};
 
 fs.existsSync(path.resolve(".env"))
     ? require("dotenv").config()
@@ -72,10 +77,54 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                test: /\.(css|scss)$/,
+                loader: ExtractTextPlugin.extract({
+                    fallback: {
+                        loader: "style-loader",
+                        options: sourceMapOptions
+                    },
+                    use: [
+                        {
+                            loader: "css-loader",
+                            options: {
+                                modules: true,
+                                localIdentName: debug ? "[local]" : "[hash:base64:3]",
+                                ...sourceMapOptions
+                            }                            
+                        },
+                        {
+                            loader: "postcss-loader",
+                            options: {
+                                plugins: () => {
+                                    const plugins = [require("autoprefixer")()];
+                                    !debug && plugins.push(require("cssnano")());
+                                    return plugins;
+                                },
+                                ...sourceMapOptions
+                            }
+                        },
+                        {
+                            loader: "sass-loader",
+                            options: {
+                                includePaths: [
+                                    path.resolve("./styles"),
+                                    path.resolve("./node_modules/compass-mixins/lib"),
+                                ],
+                                ...sourceMapOptions
+                            }
+                        }
+                    ]
+                })
             }
         ]
     },
     plugins: [
+        new ExtractTextPlugin({
+            filename: `styles.v${meta.version}.css`,
+            publicPath: debug ? "/" : "/static/"
+        }),
         new Webpack.NamedModulesPlugin(),
         new Webpack.NodeEnvironmentPlugin(),
         new Webpack.optimize.ModuleConcatenationPlugin(),
