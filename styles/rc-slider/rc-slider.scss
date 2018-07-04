@@ -1,6 +1,6 @@
 .wrap-rc-slider {
 
-  .rc-slider {
+  :global(.rc-slider) {
     position: relative;
     width: 100%;
     height: 14px;
@@ -9,7 +9,7 @@
     touch-action: none;
     box-sizing: border-box;
   
-    .rc-slider-rail {
+    &:global(-rail) {
       position: absolute;
       width: 100%;
       height: 14px;
@@ -19,7 +19,7 @@
       box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.11);
     }
 
-    .rc-slider-track {
+    &:global(-track) {
       height: 14px;
       position: absolute;
       left: 0;
@@ -28,7 +28,7 @@
       background-image: linear-gradient(to right, #f2abff 0%, #d554ec 100%);
     }
 
-    .rc-slider-handle {
+    &:global(-handle) {
       position: absolute;
       width: 31px;
       height: 31px;
@@ -44,7 +44,7 @@
       z-index: 100;
     }
 
-    .rc-slider-step {
+    &:global(-step) {
       position: absolute;
       width: 100%;
       height: 14px;

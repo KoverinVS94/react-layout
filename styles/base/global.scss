@@ -17,7 +17,8 @@ body {
   
     opacity: 1;
     
-    #preloader {
+    
+    :global(#preloader) {
       display: none;
     }
   }

@@ -18,28 +18,92 @@ const LoaderOverlay = styled.div`
 `;
 
 const SpinnerAnimation = styled(PreloaderMarkup) `
-    @keyframes spin {
-        to {
-            transform: rotate(0deg);
-            opacity: 0.2;
-        }
-        50% {
-            transform: rotate(180deg);
-            opacity: 1;
-        }
-        from {
-            transform: rotate(360deg);
-            opacity: 0.2;
-        }
+@keyframes lds-ripple {
+    0% {
+        top: 96px;
+        left: 96px;
+        width: 0;
+        height: 0;
+        opacity: 1;
     }
-    display: block;
+    100% {
+        top: 18px;
+        left: 18px;
+        width: 156px;
+        height: 156px;
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes lds-ripple {
+    0% {
+        top: 96px;
+        left: 96px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        top: 18px;
+        left: 18px;
+        width: 156px;
+        height: 156px;
+        opacity: 0;
+    }
+}
+
+.lds-ripple {
+    position: relative;
+}
+
+.lds-ripple div {
+    box-sizing: content-box;
     position: absolute;
-    width: 80px;
-    height: 80px;
-    left: 50%;
-    top: 50%;
-    margin: -40px 0 0 -40px;
-    animation: spin 1.7s linear infinite;
+    border-width: 4px;
+    border-style: solid;
+    opacity: 1;
+    border-radius: 50%;
+    -webkit-animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(1) {
+    border-color: #65bc1f;
+}
+
+.lds-ripple div:nth-child(2) {
+    border-color: #65bc1f;
+    -webkit-animation-delay: -0.5s;
+    animation-delay: -0.5s;
+}
+
+.lds-ripple {
+    width: 200px !important;
+    height: 200px !important;
+    -webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+    transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background: #fff;
+}
+
+.lds-css {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
 `;
 
 export class Preloader extends React.Component {
@@ -60,13 +124,12 @@ export class Preloader extends React.Component {
             <React.Fragment>
                 <Helmet>
                     <style>{`
-                        #content-overlay {
+                        body {
                             height: 100%;
                             overflow: hidden;
                         }
-                        body[data-loaded="true"] #content-overlay {
-                            overflow: inherit;
-                            overflow: inherit;
+                        body[data-loaded="true"] {
+                            overflow-y: inherit;
                         }
                     `}
                     </style>
