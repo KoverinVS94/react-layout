@@ -23,7 +23,7 @@ export class Footer extends React.Component {
                                 </p>
                                 <p>
                                     Годовая процентная ставка без учета акций и специальных
-                                    предложений — 630%. Ставка может быть снижена для клиентов,
+                                    предложений — 630,15%. Ставка может быть снижена для клиентов,
                                     которые хорошо себя зарекомендовали. Все данные по кредиту
                                     или активной заявке можно посмотреть
                                     в личном кабинете пользователя.
@@ -31,9 +31,9 @@ export class Footer extends React.Component {
                             </div>
                             <div className={hashClasses["footer-aside"]}>
                                 <div className={hashClasses["contacts"]}>
-                                    <a href="tel:+380444708555">(044) 470-85-55</a>
-                                    <a href="mailto:info@zanimaj.org.ua">info@zanimaj.org.ua</a>
-                                    <a href="mailto:zanimaj.org.ua">zanimaj.org.ua</a>
+                                    <a href="tel:+380444707565">(044) 470-75-65</a>
+                                    <a href="mailto:info@pozichka.org">info@pozichka.org</a>
+                                    <a href="https://pozichka.org">pozichka.org</a>
                                 </div>
                                 <div className={hashClasses["working-hours"]}>
                                     <span>Ответим на ваши вопросы</span>

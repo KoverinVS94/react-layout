@@ -98,7 +98,7 @@ export class Calculator extends React.Component<{}, CalculatorState> {
                     </div>
                     <div className={hashClasses["calc-aside"]}>
                         <button className={hashClasses["btn-action"]}>Получить деньги</button>
-                        <p>Мы гарантируем выгодные и прозрачные условия. Скрытые платежи и комиссии отсутствуют.</p>
+                        <p>Мы гарантируем прозрачные условия работы. Скрытые платежи и комиссии отсутствуют.</p>
                     </div>
                 </div>
                 <div className={hashClasses["calc-bottom"]}>
@@ -114,7 +114,7 @@ export class Calculator extends React.Component<{}, CalculatorState> {
                     </div>
                     <div className={hashClasses["text-percent"]}>
                         <i className={`${hashClasses["icon"]} ${hashClasses["icon-info"]}`} />
-                        <p>Наша APR (максимальная годовая процентная ставка) составляет 638,75%.</p>
+                        <p>Наша APR (максимальная годовая процентная ставка) составляет 630,85%.</p>
                     </div>
                 </div>
             </React.Fragment>
@@ -146,8 +146,8 @@ export class Calculator extends React.Component<{}, CalculatorState> {
     public get conditions() {
         return {
             term: {
-                min: 5,
-                max: 30,
+                min: 65,
+                max: 90,
             },
             amount: {
                 min: 250,
