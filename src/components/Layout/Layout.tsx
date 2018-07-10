@@ -1,23 +1,11 @@
 import * as React from "react";
 import Helmet from "react-helmet";
 import * as PropTypes from "prop-types";
-import { Route, Switch, Link } from "react-router-dom";
-
-import {
-    Calculator as ReactCreditCalculator,
-    CalculatorControlWrapper,
-    CalculatorSummaryButton,
-    CalculatorControlTypes,
-    CalculatorLabelTypes,
-    CalculatorButton,
-    CalculatorSlider,
-    CalculatorInput,
-    CalculatorLabel
-} from "react-credit-calculator";
+import { ExpandController } from "react-expand";
+import { Calculator as ReactCreditCalculator } from "react-credit-calculator";
 
 import { Preloader } from "../Preloader";
 
-import { NotFoundRoute } from "./NotFoundRoute";
 import { Footer } from "./Footer";
 import { SectionMain, SectionReceipt, SectionHowItWork, SectionService } from "../Sections";
 
@@ -34,19 +22,21 @@ export class Layout extends React.Component<LayoutProps> {
 
     public render(): React.ReactNode {
         return (
-            <Preloader>
-                <Helmet>
-                    <meta charSet="UTF-8" />
-                    <meta name="viewport" content="width=device-width,initial-scale=1" />
-                </Helmet>
-                <ReactCreditCalculator {...this.conditions}>
-                    <SectionMain />
-                    <SectionReceipt />
-                    <SectionHowItWork />
-                    <SectionService />
-                    <Footer />
-                </ReactCreditCalculator>
-            </Preloader>
+            <ExpandController>
+                <Preloader>
+                    <Helmet>
+                        <meta charSet="UTF-8" />
+                        <meta name="viewport" content="width=device-width,initial-scale=1" />
+                    </Helmet>
+                    <ReactCreditCalculator {...this.conditions}>
+                        <SectionMain />
+                        <SectionReceipt />
+                        <SectionHowItWork />
+                        <SectionService />
+                        <Footer />
+                    </ReactCreditCalculator>
+                </Preloader>
+            </ExpandController>
         );
     }
 

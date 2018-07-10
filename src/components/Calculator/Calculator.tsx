@@ -1,34 +1,37 @@
 import * as React from "react";
 import {
-    Calculator as ReactCreditCalculator,
     CalculatorControlWrapper,
-    CalculatorSummaryButton,
     CalculatorControlTypes,
+    CalculatorContextTypes,
     CalculatorLabelTypes,
-    CalculatorButton,
+    CalculatorContext,
     CalculatorSlider,
     CalculatorInput,
     CalculatorLabel
 } from "react-credit-calculator";
-
 import { OnMobile, OnMobileTablet, OnTabletDesktop, OnDesktop } from "react-breakpoint";
+import { ExpandControl, ControlledExpandElement, ExpandContextTypes, ExpandContext } from "react-expand";
+
+import { RegisterForm } from "../RegisterForm";
 
 const hashClasses = require("main.scss");
 
-interface CalculatorState {
-    promocode: string;
-}
-
-declare const PERSONAL_AREA: string;
-export class Calculator extends React.Component<{}, CalculatorState> {
-
-    public readonly state: CalculatorState = {
-        promocode: ""
+export class Calculator extends React.Component {
+    public static readonly contextTypes = {
+        ...CalculatorContextTypes,
+        ...ExpandContextTypes
     };
+    public static readonly expandKey = "mainCalc";
+
+    public readonly context: CalculatorContext & ExpandContext
+
+    public componentDidMount() {
+        this.context.changeExpandState(Calculator.expandKey, true)();
+    }
 
     public render(): React.ReactNode {
         return (
-            <React.Fragment>
+            <ControlledExpandElement expandId={Calculator.expandKey}>
                 <div className={hashClasses["calc-main"]}>
                     <div className={hashClasses["calc-content"]}>
                         <CalculatorControlWrapper type={CalculatorControlTypes.amount}>
@@ -48,10 +51,10 @@ export class Calculator extends React.Component<{}, CalculatorState> {
                                 <div className={hashClasses["wrap-rc-slider"]}>
                                     <CalculatorSlider />
                                     <span className={`${hashClasses["dot"]} ${hashClasses["dot-left"]}`}>
-                                        {this.conditions.amount.min}
+                                        {this.context.Conditions.Amount.min}
                                     </span>
                                     <span className={`${hashClasses["dot"]} ${hashClasses["dot-right"]}`}>
-                                        {this.conditions.amount.max}
+                                        {this.context.Conditions.Amount.max}
                                     </span>
                                 </div>
                                 <OnTabletDesktop>
@@ -80,10 +83,10 @@ export class Calculator extends React.Component<{}, CalculatorState> {
                                 <div className={hashClasses["wrap-rc-slider"]}>
                                     <CalculatorSlider />
                                     <span className={`${hashClasses["dot"]} ${hashClasses["dot-left"]}`}>
-                                        {this.conditions.term.min}
+                                        {this.context.Conditions.Term.min}
                                     </span>
                                     <span className={`${hashClasses["dot"]} ${hashClasses["dot-right"]}`}>
-                                        {this.conditions.term.max}
+                                        {this.context.Conditions.Term.max}
                                     </span>
                                 </div>
                                 <OnTabletDesktop>
@@ -97,7 +100,12 @@ export class Calculator extends React.Component<{}, CalculatorState> {
                         </CalculatorControlWrapper>
                     </div>
                     <div className={hashClasses["calc-aside"]}>
-                        <button className={hashClasses["btn-action"]}>Получить деньги</button>
+                        <ExpandControl
+                            expandId={RegisterForm.expandKey}
+                            className={hashClasses["btn-action"]}
+                        >
+                            Получить деньги
+                        </ExpandControl>
                         <p>Мы гарантируем прозрачные условия работы. Скрытые платежи и комиссии отсутствуют.</p>
                     </div>
                 </div>
@@ -117,43 +125,7 @@ export class Calculator extends React.Component<{}, CalculatorState> {
                         <p>Наша APR (максимальная годовая процентная ставка) составляет 630,85%.</p>
                     </div>
                 </div>
-            </React.Fragment>
+            </ControlledExpandElement>
         );
-    }
-
-    protected handlePromocodeChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
-        this.setState({
-            promocode: event.currentTarget.value
-        });
-    }
-
-    protected returnDateFormat = (date: Date): string => (
-        `${date.getDate().toString().padStart(2, "0")}.` +
-        `${date.getMonth().toString().padStart(2, "0")}.` +
-        `${date.getFullYear()}`
-    )
-
-    protected handleSubmit = (state: { amount: number; term: number }): void => {
-        const params = new URLSearchParams();
-
-        params.append("credit-sum", state.amount.toString());
-        params.append("credit-term", state.term.toString());
-        this.state.promocode && params.append("promocode", this.state.promocode);
-
-        location.href = `${PERSONAL_AREA}register/loan?${params}`;
-    }
-
-    public get conditions() {
-        return {
-            term: {
-                min: 65,
-                max: 90,
-            },
-            amount: {
-                min: 250,
-                max: 4000
-            },
-            interest: 0.0175
-        };
     }
 }

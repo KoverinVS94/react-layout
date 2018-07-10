@@ -32,6 +32,11 @@ p {
   margin:0;
 }
 
+:global(#content-overlay){
+
+  overflow: hidden;
+}
+
 .container {
   @include container;
   max-width: 75em;
@@ -68,6 +73,11 @@ p {
       
       text-align: center;
       margin: 0 0 1.563em 0;
+    }
+
+    @include breakpoint($tablet-p) {
+      
+      width: 450px;
     }
 
     @include breakpoint($tablet-laptop-sm) {

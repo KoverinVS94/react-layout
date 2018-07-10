@@ -154,6 +154,14 @@
     height: 29px;
     background-image: url('images/icon-adress.svg');
   }
+
+  &-sms {
+    width: 31px;
+    height: 29px;
+    background-image: url('images/icon-sms.svg');
+    background-size: cover;
+    vertical-align: middle;
+  }
 }
 
 

@@ -132,8 +132,9 @@ module.exports = {
             DEVELOPMENT: JSON.stringify(debug),
             PORT: JSON.stringify(process.env.PORT),
             BUILD_VERSION: JSON.stringify(meta.version),
+            BASE_URL: JSON.stringify(process.env.BASE_URL),
             RAVEN_DSN: JSON.stringify(process.env.RAVEN_DSN),
-            BUILD_TIME: JSON.stringify(new Date().toISOString()),
+            BUILD_TIME: JSON.stringify(new Date().toISOString())
         })
     ]
 };

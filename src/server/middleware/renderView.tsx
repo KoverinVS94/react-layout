@@ -18,7 +18,7 @@ export function renderView(request: Request, response: Response): void {
     let body;
     try {
         body = ReactDOMServer.renderToString(
-            <StaticRouter context={context} location={request.url}>
+            <StaticRouter context={context as any} location={request.url}>
                 <Layout domain={`${request.protocol}://${request.headers.host}`} />
             </StaticRouter>
         );

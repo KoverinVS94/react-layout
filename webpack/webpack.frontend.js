@@ -28,7 +28,7 @@ module.exports = {
         port: 8088
     },
     entry: [
-        path.resolve("./src/index.tsx")
+        "@babel/polyfill", path.resolve("./src/index.tsx")
     ],
     output: {
         filename: `[name].v${meta.version}.js`,

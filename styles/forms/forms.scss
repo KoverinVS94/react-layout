@@ -27,7 +27,6 @@
 }
 
 .register {
-  display: none;
   position: relative;
   z-index: 10;
   border-radius: 30px;
@@ -35,12 +34,12 @@
 
   @include breakpoint($mobile-p) {
 
-    padding: 0 .625em;
+    margin: 0 .625em;
   }
 
   @include breakpoint($tablet-laptop-sm) {
 
-    padding: 0 3.125em;
+    margin: 0 3.125em;
   }
 
   .credit-info {
@@ -244,9 +243,14 @@
         margin-bottom: 1.25em;
       }
 
+      .input-group {
+        position: relative;
+      }
+
       .half {
         display: inline-block;
         width: 46%;
+        vertical-align: top;
 
         @include breakpoint($mobile) {
 
@@ -289,6 +293,14 @@
           margin: 0 0 .938em 0;
         }
       }
+
+      .has-error {
+
+        .form-control {
+      
+          border-color: #ff7b7b;
+        }
+      }
     }
   }
 }
@@ -306,6 +318,12 @@
   @include breakpoint($tablet) {
     width: 100%;
     text-align: center;
+  }
+
+  .form-group-hint{
+    display: block;
+    text-align: center;
+    padding-top: .313em;
   }
 
   .checkbox-group {
@@ -355,6 +373,19 @@
       }
     }
   }
+
+  .has-error {
+
+    .register-checkbox {
+
+      border-color: #ff7b7b;
+    }
+  }
+}
+
+.form-group-hint {
+  font-size: .875em;
+  color: #e15f5f;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
