@@ -43,14 +43,14 @@ export class Layout extends React.Component<LayoutProps> {
     public get conditions() {
         return {
             term: {
-                min: 5,
-                max: 30,
+                min: 65,
+                max: 90,
             },
             amount: {
                 min: 250,
                 max: 4000
             },
-            interest: 0.0175
+            interest: 0.00175
         };
     }
 }
