@@ -27,6 +27,7 @@ export class Layout extends React.Component<LayoutProps> {
                     <Helmet>
                         <meta charSet="UTF-8" />
                         <meta name="viewport" content="width=device-width,initial-scale=1" />
+                        <title>Займы на карту или наличными до 4000 за 7 минут в Украине</title>
                     </Helmet>
                     <ReactCreditCalculator {...this.conditions}>
                         <SectionMain />
