@@ -320,7 +320,7 @@
     text-align: center;
   }
 
-  .form-group-hint{
+  .form-group-hint {
     display: block;
     text-align: center;
     padding-top: .313em;
@@ -338,8 +338,8 @@
       border-radius: 50%;
       border-width: 2px;
       border-style: solid;
-      border-color: #cccccc #dadada #e8e8e8;
-      background-color: #ffffff;
+      border-color: #ccc #dadada #e8e8e8;
+      background-color: #fff;
       vertical-align: middle;
 
       &.active {
@@ -356,7 +356,7 @@
       width: 287px;
       padding-left: 1.25em;
 
-      color: #bbbbbb;
+      color: #bbb;
       font-size: .938em;
       text-align: left;
       vertical-align: middle;

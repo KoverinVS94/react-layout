@@ -77,7 +77,7 @@ export class RegisterForm extends React.Component<{}, RegisterFormState> {
                                                 placeholder="Фамилия"
                                             />
                                         </AutoValidate>
-                                        <Hint />
+                                        <Hint className={hashClasses["form-group-hint"]} />
                                     </FormGroup>
                                     <FormGroup name="firstName" className={hashClasses["form-group"]}>
                                         <AutoValidate groupName="firstName">
@@ -97,7 +97,7 @@ export class RegisterForm extends React.Component<{}, RegisterFormState> {
                                                 placeholder="Отчество"
                                             />
                                         </AutoValidate>
-                                        <Hint />
+                                        <Hint className={hashClasses["form-group-hint"]} />
                                     </FormGroup>
                                 </div>
                                 <div className={`${hashClasses["half"]} ${hashClasses["half-right"]}`}>
@@ -109,7 +109,7 @@ export class RegisterForm extends React.Component<{}, RegisterFormState> {
                                                 placeholder="Email"
                                             />
                                         </AutoValidate>
-                                        <Hint />
+                                        <Hint className={hashClasses["form-group-hint"]} />
                                     </FormGroup>
                                     <FormGroup name="phone" className={hashClasses["form-group"]}>
                                         <AutoRequestProvider groupName="phone" request={this.handleRequestSms}>
@@ -129,7 +129,7 @@ export class RegisterForm extends React.Component<{}, RegisterFormState> {
                                                 />
                                             </div>
                                         </AutoRequestProvider>
-                                        <Hint />
+                                        <Hint className={hashClasses["form-group-hint"]} />
                                     </FormGroup>
                                     {this.state.shouldRenderSmsTokenField && <SmsTokenField />}
                                 </div>
@@ -146,7 +146,7 @@ export class RegisterForm extends React.Component<{}, RegisterFormState> {
                                         согласие на обработку моих личных данных
                                     </a>
                                 </p>
-                                <Hint />
+                                <Hint className={hashClasses["form-group-hint"]} />
                             </FormGroup>
                             <SubmitButton loadingComponent={<span>...</span>} className={hashClasses["btn-action"]}>
                                 Зарегистрироваться
