@@ -138,7 +138,10 @@ export class RegisterForm extends React.Component<{}, RegisterFormState> {
                         <div className={hashClasses["confirm"]}>
                             <FormGroup name="agreed" className={hashClasses["checkbox-group"]}>
                                 <AutoValidate groupName="agreed" onChange>
-                                    <Checkbox className={hashClasses["register-checkbox"]} activeClassName="active" />
+                                    <Checkbox
+                                        className={hashClasses["register-checkbox"]}
+                                        activeClassName={hashClasses["active"]}
+                                    />
                                 </AutoValidate>
                                 <p>
                                     Даю&nbsp;
