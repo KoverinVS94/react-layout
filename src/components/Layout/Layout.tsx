@@ -1,13 +1,10 @@
 import * as React from "react";
 import Helmet from "react-helmet";
-import * as PropTypes from "prop-types";
-import { ExpandController } from "react-expand";
-import { Calculator as ReactCreditCalculator } from "react-credit-calculator";
+import * as PropTypes from "prop-types"
 
-import { Preloader } from "../Preloader";
-
-import { Footer } from "./Footer";
-import { SectionMain, SectionReceipt, SectionHowItWork, SectionService } from "../Sections";
+import { Header } from "./partials/Header";
+import { Footer } from "./partials/Footer";
+import { SectionMain } from "../Sections";
 
 export interface LayoutProps {
     domain: string;
@@ -22,36 +19,16 @@ export class Layout extends React.Component<LayoutProps> {
 
     public render(): React.ReactNode {
         return (
-            <ExpandController>
-                <Preloader>
-                    <Helmet>
-                        <meta charSet="UTF-8" />
-                        <meta name="viewport" content="width=device-width,initial-scale=1" />
-                        <title>Займы на карту или наличными до 4000 за 7 минут в Украине</title>
-                    </Helmet>
-                    <ReactCreditCalculator {...this.conditions}>
-                        <SectionMain />
-                        <SectionReceipt />
-                        <SectionHowItWork />
-                        <SectionService />
-                        <Footer />
-                    </ReactCreditCalculator>
-                </Preloader>
-            </ExpandController>
+            <React.Fragment>
+                <Helmet>
+                    <meta charSet="UTF-8" />
+                    <meta name="viewport" content="width=device-width,initial-scale=1" />
+                    <title>React Layout</title>
+                </Helmet>
+                <Header />
+                <SectionMain />
+                <Footer />
+            </React.Fragment>
         );
-    }
-
-    public get conditions() {
-        return {
-            term: {
-                min: 65,
-                max: 90,
-            },
-            amount: {
-                min: 250,
-                max: 4000
-            },
-            interest: 0.00175
-        };
     }
 }

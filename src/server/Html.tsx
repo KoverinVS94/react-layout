@@ -5,8 +5,6 @@ import * as React from "react";
 import { ServerStyleSheet } from "styled-components";
 import { HelmetData, HelmetHTMLBodyDatum } from "react-helmet";
 
-import { Preloader } from "../components";
-
 export const Html: React.SFC<{ helmet: HelmetData, version: string }> = (props): JSX.Element => {
     const { htmlAttributes, bodyAttributes, title, meta, link, style } = props.helmet;
 
@@ -29,7 +27,6 @@ export const Html: React.SFC<{ helmet: HelmetData, version: string }> = (props):
             <head dangerouslySetInnerHTML={{ __html: headChildren.join("") }} />
             <body {...bodyAttributes.toString()}>
                 {props.children}
-                <script dangerouslySetInnerHTML={{ __html: `(${Preloader.staticStyleLoader.toString()})()` }} />
             </body>
         </html>
     );
