@@ -1,15 +1,15 @@
 import * as React from "react";
-import { ControlledExpandElement } from "react-expand";
 
 const hashClasses = require("main.scss");
 
-export class SectionMain extends React.Component {
+export class Header extends React.Component {
+
     public render(): React.ReactNode {
         return (
             <React.Fragment>
-                <div className="section-main">
-                   Main Content
-                </div>
+                <header>
+                    Header Content
+                </header>
             </React.Fragment>
         );
     }
